@@ -1,6 +1,6 @@
 <template>
   <div class="login-wrap">
-    <div clsss="ms-title">登录管理系统</div>
+    <div class="ms-title">登录管理系统</div>
     <div class="ms-login">
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="demo-ruleForm">
         <div v-if="errorInfo">
@@ -102,16 +102,14 @@ export default {
     width:100%;
     height:36px;
   }
-  .code {
-    width: 112px;
-    height: 35px;
-    border: 1px solid #ccc;
-    float: right;
-    border-radius: 2px;
-  }
-  .validate-code {
-    width: 136px;
-    float: left;
+  .ms-title{
+    position: absolute;
+    top:50%;
+    width:100%;
+    margin-top: -230px;
+    text-align: center;
+    font-size:30px;
+    color: #fff;
   }
   .register {
     font-size:14px;
