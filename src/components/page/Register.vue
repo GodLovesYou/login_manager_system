@@ -141,6 +141,25 @@ export default {
         ]
       }
     }
+  },
+  methods: {
+    onSubmit (formName) {
+      const self = this
+      self.$refs[formName].validate((valid) => {
+        if (valid) {
+          self.$axios.post('/api/user/addUser', self.form).then(function (response) {
+            self.$router('/register-success')
+          }).then(function (error) {
+            console.log(error)
+          })
+        } else {
+          return false
+        }
+      })
+    },
+    onCancle () {
+      this.$router.push('/login')
+    }
   }
 }
 </script>
