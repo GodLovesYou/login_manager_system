@@ -47,7 +47,7 @@ export default {
       const self = this
       self.$refs[formName].validate((valid) => {
         if (valid) {
-          self.$axios.post('/api/user/login', JSON.stringify(self.ruleForm))
+          self.$axios.post('http://localhost:3000/api/user/login', JSON.stringify(self.ruleForm))
             .then((response) => {
               if (response.data === -1) {
                 self.errorInfo = true

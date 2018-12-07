@@ -16,6 +16,10 @@ export default new Router({
     {
       path: '/register',
       component: resolve => require(['../components/page/Register.vue'], resolve)
+    },
+    {
+      path: '/register-success',
+      component: resolve => require(['../components/page/RegisterSuccess.vue'], resolve)
     }
   ]
 })

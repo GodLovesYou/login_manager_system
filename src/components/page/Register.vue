@@ -30,7 +30,7 @@
         </el-form-item>
         <el-form-item prop="birth" label="出生日期">
           <el-col :span="24">
-            <el-date-picker type="date" placeholder="选择日期" v-model="form.birth" value-format="yyyy-MM-dd" style="width: 100%"></el-date-picker>
+            <el-date-picker type="date" placeholder="选择日期" v-model="form.birth" style="width: 100%"></el-date-picker>
           </el-col>
         </el-form-item>
         <el-form-item prop="sex" label="性别">
@@ -134,7 +134,7 @@ export default {
           { validator: validateCard, trigger: 'blur' }
         ],
         birth: [
-          { required: true, message: '请输入出生日期', type: 'date', trigger: 'blur' }
+          { required: true, message: '请输入出生日期', type: 'date', trigger: 'change' }
         ],
         sex: [
           { required: true, message: '请输入性别', trigger: 'blur' }
@@ -147,8 +147,8 @@ export default {
       const self = this
       self.$refs[formName].validate((valid) => {
         if (valid) {
-          self.$axios.post('/api/user/addUser', self.form).then(function (response) {
-            self.$router('/register-success')
+          self.$axios.post('http://localhost:3000/api/user/addUser', self.form).then(function (response) {
+            self.$router.push('/register-success')
           }).then(function (error) {
             console.log(error)
           })
