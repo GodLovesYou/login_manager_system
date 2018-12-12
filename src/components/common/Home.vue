@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <v-head></v-head>
-    <v-sidebar></v-sidebar>
+    <v-side-bar></v-side-bar>
     <div class="content">
       <transition name="move" mode="out-in"><router-view></router-view></transition>
     </div>
@@ -10,11 +10,11 @@
 
 <script>
 import vHead from './Header'
-import vSideba from './SideBar'
+import vSideBar from './SideBar'
 export default {
   name: 'Home',
-  comments: {
-    vHead, vSideba
+  components: {
+    vHead, vSideBar
   }
 }
 </script>
