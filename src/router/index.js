@@ -24,6 +24,18 @@ export default new Router({
         {
           path: '/userCenter',
           component: resolve => require(['../components/page/UserCenter.vue'], resolve)
+        },
+        {
+          path: '/modifyUser',
+          component: resolve => require(['../components/page/ModifyUser.vue'], resolve)
+        },
+        {
+          path: '/modifyPassword',
+          component: resolve => require(['../components/page/ModifyPassword.vue'], resolve)
+        },
+        {
+          path: '/success',
+          component: resolve => require(['../components/page/Success.vue'], resolve)
         }
       ]
     },
