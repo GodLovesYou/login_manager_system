@@ -16,6 +16,10 @@ export default new Router({
         {
           path: '/',
           component: resolve => require(['../components/page/Readme.vue'], resolve)
+        },
+        {
+          path: '/upload',
+          component: resolve => require(['../components/page/Upload.vue'], resolve)
         }
       ]
     },

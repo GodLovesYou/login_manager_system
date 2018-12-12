@@ -2,7 +2,7 @@
   <div class="header">
     <div class="logo">登录管理系统</div>
     <div class="user-info">
-      <el-dropdown :hide-on-click="false" @cammand="handleCommand">
+      <el-dropdown @command="handleCommand">
         <span class="el-dropdown-link">
           <img class="user-logo" src="../../../static/img/img.jpg"/>
           {{username}}
