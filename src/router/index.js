@@ -20,6 +20,10 @@ export default new Router({
         {
           path: '/upload',
           component: resolve => require(['../components/page/Upload.vue'], resolve)
+        },
+        {
+          path: '/userCenter',
+          component: resolve => require(['../components/page/UserCenter.vue'], resolve)
         }
       ]
     },

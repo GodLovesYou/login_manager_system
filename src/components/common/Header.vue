@@ -32,7 +32,6 @@ export default {
   },
   methods: {
     handleCommand (command) {
-      alert(command)
       if (command === 'loginOut') {
         sessionStorage.removeItem('ms_username')
         sessionStorage.removeItem('ms_userId')
