@@ -47,7 +47,7 @@ export default {
       const self = this
       self.$refs[formName].validate((valid) => {
         if (valid) {
-          self.$axios.post('http://localhost:3000/api/user/login', JSON.stringify(self.ruleForm))
+          self.$axios.post('http://localhost:3001/api/user/login', JSON.stringify(self.ruleForm))
             .then((response) => {
               if (response.data === -1) {
                 self.errorInfo = true
@@ -80,6 +80,7 @@ export default {
     position: relative;
     width:100%;
     height:100%;
+    background: url("https://img.alicdn.com/tfs/TB1zsNhXTtYBeNjy1XdXXXXyVXa-2252-1500.png");
   }
   .ms-login{
     position: absolute;
