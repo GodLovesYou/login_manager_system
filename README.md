@@ -1,7 +1,8 @@
 # login_manager_system
 
 > A Vue.js project
-
+>登录![image](https://github.com/GodLovesYou/login_manager_system/blob/master/main.jpg)
+>首页![image](https://github.com/GodLovesYou/login_manager_system/blob/master/zhu.jpg)
 ## Build Setup
 
 ``` bash
